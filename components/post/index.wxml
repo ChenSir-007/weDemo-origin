@@ -1,0 +1,15 @@
+<view data-id="{{list.postId}}" class="post-container" bindtap="onGoToDetail">
+  <view class="post-author-date">
+    <image class="post-author" src="{{list.avatar}}" />
+    <text class="post-date">{{list.date}}</text>
+  </view>
+  <text class="post-title">{{list.title}}</text>
+  <image class="post-image" src="{{list.imgSrc}}" />
+  <text class="post-content">{{list.content}}</text>
+  <view class="post-like">
+    <l-icon class="post-like-image" size="28" name="favor" color="#666" />
+    <text class="post-like-font">{{list.collection}}</text>
+    <l-icon class="post-like-image" size="32" name="eye" color="#666" />
+    <text class="post-like-font">{{list.reading}}</text>
+  </view>
+</view>

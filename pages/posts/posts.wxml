@@ -1,0 +1,17 @@
+<!--pages/posts/posts.wxml-->
+<view>
+  <swiper autoplay indicator-dots circular interval="3000">
+    <swiper-item>
+      <image data-id="3" bindtap="onGoToDetail" src="/images/bestplayers.png" />
+    </swiper-item>
+    <swiper-item>
+      <image data-id="0" bindtap="onGoToDetail" src="/images/lpl.png" />
+    </swiper-item>
+    <swiper-item>
+      <image data-id="4" bindtap="onGoToDetail" src="/images/jumpfly.png" />
+    </swiper-item>
+  </swiper>
+  <block wx:for="{{posts}}" wx:for-item="item" wx:key="postId">
+    <post bindposttap="onGoToDetail" list="{{item}}" />
+  </block>
+</view>
